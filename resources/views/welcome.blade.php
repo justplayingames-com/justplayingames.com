@@ -66,6 +66,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            @if (Firewall::isWhitelisted(Request::ip()))
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -75,6 +76,7 @@
                         <a href="{{ url('/register') }}">Register</a>
                     @endif
                 </div>
+            @endif
             @endif
 
             <div class="content">

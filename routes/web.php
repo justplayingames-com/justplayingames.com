@@ -11,10 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['middleware' => 'fw-block-bl'], function () 
+{
+    Route::get('/', function () {
+        return view('welcome');
+    });
+
+    Route::group(['middleware' => 'fw-allow-wl'], function () 
+    {
+        Auth::routes();
+
+        Route::get('/home', 'HomeController@index')->name('home');
+    });
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
