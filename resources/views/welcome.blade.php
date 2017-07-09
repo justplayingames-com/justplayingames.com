@@ -1,7 +1,6 @@
 @extends('layouts.app-guest')
 
 @section('content')
-<h1>Welcome!</h1>
 @endsection
 
 @section('content-links')
@@ -10,8 +9,8 @@
     @if (Auth::check())
         <a href="{{ url('/home') }}">Home</a>
     @else
-        <a href="{{ url('/login') }}">Login</a>
-        <a href="{{ url('/register') }}">Register</a>
+        <a class="btn btn-info" href="{{ url('/login') }}">Login</a>
+        <a class="btn btn-info" href="{{ url('/register') }}">Register</a>
     @endif
 @endif
 @endif
