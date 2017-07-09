@@ -59,7 +59,21 @@ html, body {
     text-transform: uppercase;
 }
 
+.social-links > a {
+    color: #636b6f;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .m-b-md {
     margin-bottom: 30px;
 }
 
+
+.m-b-lg {
+    margin-bottom: 50px;
+}

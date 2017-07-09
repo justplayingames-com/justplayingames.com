@@ -1,0 +1,2 @@
+<a href="https://github.com/justplayingames-com/" title="Github"><i class="fa fa-fw fa-2x fa-github"></i></a>
+<a href="https://twitter.com/Just_Playin_G" title="Twitter"><i class="fa fa-fw fa-2x fa-twitter"></i></a>

@@ -16,5 +16,4 @@
 @endif
 @endif
 
-<a href="https://github.com/justplayingames-com/">GitHub</a>
 @endsection

@@ -6,8 +6,11 @@
         @include('partials.title')
         @yield('content')
         <hr>
-        <div class="links">
+        <div class="links m-b-lg">
             @yield('content-links')
+        </div>
+        <div class="social-links">
+        @include('partials.social')
         </div>
     </div>
 </div>
