@@ -9,7 +9,8 @@
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "pragmarx/firewall": "^1.0",
-        "webpatser/laravel-uuid": "^2.0"
+        "webpatser/laravel-uuid": "^2.0",
+        "justplayingames/blog": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -49,5 +50,11 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "optimize-autoloader": true
-    }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/justplayingames-com/justplayingames-blog"
+        }
+    ]
 }

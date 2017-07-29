@@ -24,7 +24,10 @@ $line-height-base: 1.6;
 $text-color: #7e9ad0;
 
 // Navbar
-$navbar-default-bg: #050e1f;
+$navbar-default-bg: $body-bg;
+$navbar-default-link-hover-color: $text-color;
+
+$navbar-default-brand-hover-color: $brand-success;
 
 // Buttons
 $btn-default-color: $text-color;
