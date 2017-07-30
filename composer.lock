@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bd871191be82d9b450a2ab280d6c4c64",
-    "content-hash": "71ebac58c6ec496ef7ce38a941b8b5fa",
+    "hash": "7166314f086e4ffd30387f4f850e1d84",
+    "content-hash": "0ff8f436e704a14132baae2166feef5d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -269,6 +269,37 @@
                 "laravel"
             ],
             "time": "2017-07-29 20:14:25"
+        },
+        {
+            "name": "justplayingames/game-canned-kitty",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justplayingames-com/justplayingames-game-canned-kitty",
+                "reference": "c084b53c4fab4f81fb4608933278fdcf7ce9a889"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JustPlayinGames\\Games\\CannedKitty\\": "src/"
+                }
+            },
+            "license": [
+                "BSD 3-clause"
+            ],
+            "authors": [
+                {
+                    "name": "Just Playin",
+                    "email": "jp@justplayingames.com"
+                }
+            ],
+            "description": "Canned Kitty game on justplayingames.com",
+            "keywords": [
+                "game",
+                "justplayingames",
+                "laravel"
+            ],
+            "time": "2017-07-30 16:15:58"
         },
         {
             "name": "laravel/framework",
@@ -3614,7 +3645,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "justplayingames/blog": 20
+        "justplayingames/blog": 20,
+        "justplayingames/game-canned-kitty": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

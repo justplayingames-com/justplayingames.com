@@ -10,7 +10,8 @@
         "laravel/tinker": "~1.0",
         "pragmarx/firewall": "^1.0",
         "webpatser/laravel-uuid": "^2.0",
-        "justplayingames/blog": "dev-master"
+        "justplayingames/blog": "dev-master",
+        "justplayingames/game-canned-kitty": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -55,6 +56,10 @@
         {
             "type": "git",
             "url": "https://github.com/justplayingames-com/justplayingames-blog"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/justplayingames-com/justplayingames-game-canned-kitty"
         }
     ]
 }

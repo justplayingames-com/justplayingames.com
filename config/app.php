@@ -169,6 +169,7 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         PragmaRX\Firewall\Vendor\Laravel\ServiceProvider::class,
         JustPlayinGames\Blog\BlogServiceProvider::class,
+        JustPlayinGames\Games\CannedKitty\ServiceProvider::class,
 
         /*
          * Application Service Providers...
