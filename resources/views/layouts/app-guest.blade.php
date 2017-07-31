@@ -5,15 +5,15 @@
     <div class="content">
         @include('partials.title')
         
-        <div class="m-b-md">
-        @yield('content')
-        </div>
-
         <div class="links m-b-lg">
         @yield('content-links')
         </div>
         
-        <div class="social-links">
+        <div class="m-b-md">
+        @yield('content')
+        </div>
+
+        <div class="social-links m-b-md">
         @include('partials.social')
         </div>
     </div>

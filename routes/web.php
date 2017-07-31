@@ -17,6 +17,10 @@ Route::group(['middleware' => 'fw-block-bl'], function ()
         return view('welcome');
     });
 
+    Route::get('/games', function () {
+        return view('games');
+    });
+
     Route::group(['middleware' => 'fw-allow-wl'], function () 
     {
         Auth::routes();
