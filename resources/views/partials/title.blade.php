@@ -1,3 +1,3 @@
-<div class="title m-b-md">
-    Just Playin' Games
-</div>
+<h1 class="title">
+Just Playin' Games
+</h1>

@@ -1,21 +1,22 @@
 @extends('layouts.app')
-
 @section('body')
-<div class="flex-center position-ref full-height">
-    <div class="content">
-        @include('partials.title')
-        
-        <div class="links m-b-lg">
-        @yield('content-links')
-        </div>
-        
-        <div class="m-b-md">
-        @yield('content')
-        </div>
+<div class="row">
+<div class="col-xs-12">
+<div class="text-center">
+@include('partials.title')
+</div>
+</div>
+</div>
 
-        <div class="social-links m-b-md">
-        @include('partials.social')
-        </div>
-    </div>
+<div class="row">
+<div class="col-xs-12">
+<div class="jumbotron">
+@yield('content')
+</div>
+</div>
+</div>
+
+<div class="social-links text-center">
+@include('partials.social')
 </div>
 @endsection

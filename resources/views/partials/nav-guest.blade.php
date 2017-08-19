@@ -1,14 +1,27 @@
+<div class="row">
+
+<div class="col-xs-6 col-sm-6 margin-bottom-xs">
+<a class="btn btn-primary btn-lg btn-block" href="{{ url('/games') }}"><i class="fa fa-fw fa-3x fa-gamepad text-primary"></i><br>Let's Play!</a>
+</div>
+
+<div class="col-xs-6 col-sm-6 margin-bottom-xs">
+<a class="btn btn-info btn-lg btn-block" href="{{ url('/blog') }}"><i class="fa fa-fw fa-3x fa-newspaper-o text-info"></i><br>News</a>
+</div>
+
 @if (Firewall::isWhitelisted(Request::ip()))
 @if (Route::has('login'))
     @if (Auth::check())
-        <a class="btn btn-info btn-lg" href="{{ url('/home') }}">Home</a>
+    <div class="col-xs-12 margin-bottom-xs">
+        <a class="btn btn-info btn-lg btn-block" href="{{ url('/home') }}">Home</a>
+    </div>
     @else
-        <a class="btn btn-success btn-lg" href="{{ url('/login') }}">Login</a>
-        <a class="btn btn-default btn-lg" href="{{ url('/register') }}">Register</a>
+    <div class="col-xs-6 margin-bottom-xs">
+        <a class="btn btn-success btn-lg btn-block" href="{{ url('/login') }}"><i class="fa fa-fw fa-3x fa-sign-in text-success"></i><br>Login</a>
+    </div>
+    <div class="col-xs-6 margin-bottom-xs">
+        <a class="btn btn-default btn-lg btn-block" href="{{ url('/register') }}"><i class="fa fa-fw fa-3x fa-user-plus text-default"></i><br>Register</a>
+    </div>
     @endif
 @endif
-<a class="btn btn-info btn-lg" href="{{ url('/blog') }}">News</a>
-
 @endif
-
-<a class="btn btn-primary btn-lg" href="{{ url('/games') }}"><i class="fa fa-fw fa-3x fa-gamepad text-primary"></i><br>Let's Play!</a>
+</div>

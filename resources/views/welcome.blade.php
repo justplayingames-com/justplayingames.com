@@ -1,5 +1,5 @@
 @extends('layouts.app-landing')
 
-@section('content-links')
+@section('content')
 @include('partials.nav-guest')
 @endsection
