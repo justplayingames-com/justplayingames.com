@@ -5,10 +5,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 // Variables
-@import "_variables";
+@import "bootstrap/variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "bootstrap/bootstrap";
 
 // Font Awesome
 @import "node_modules/font-awesome/scss/font-awesome.scss";
@@ -43,16 +43,6 @@ html, body {
     font-size: 84px;
     line-height: 1;
     color: $brand-success;
-}
-
-.links > a {
-    color: $text-color;
-    padding: 0 25px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
 }
 
 .social-links > a {

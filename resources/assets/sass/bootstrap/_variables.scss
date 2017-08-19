@@ -1,0 +1,397 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:    #000001 !default;
+$gray-darker:  #000010 !default;
+$gray-dark:    #001A45 !default;
+$gray:         #2E4671 !default;
+$gray-light:   #9E9E9F !default;
+$gray-lighter: #DDE9FD !default;
+
+$color-primary-0: #27E000;	// Main Primary color */
+$color-primary-1: #69E74F;
+$color-primary-2: #4AE22A;
+$color-primary-3: #22C300;
+$color-primary-4: #1B9D00;
+
+$color-secondary-1-0: #1252C0;	// Main Secondary color (1) */
+$color-secondary-1-1: #5380CD;
+$color-secondary-1-2: #3469C4;
+$color-secondary-1-3: #0B409B;
+$color-secondary-1-4: #08337D;
+
+$color-secondary-2-0: #FFA400;	// Main Secondary color (2) */
+$color-secondary-2-1: #FFC357;
+$color-secondary-2-2: #FFB52F;
+$color-secondary-2-3: #EA9600;
+$color-secondary-2-4: #BC7900;
+
+$color-complement-0: #F90018;	// Main Complement color */
+$color-complement-1: #FA5565;
+$color-complement-2: #F92E42;
+$color-complement-3: #E20016;
+$color-complement-4: #B60011;
+
+$color-secondary-3-0: #750CC1;	// Main Secondary color (3) */
+$color-secondary-3-1: #994FCE;
+$color-secondary-3-2: #872FC6;
+$color-secondary-3-3: #5E079D;
+$color-secondary-3-4: #4C067E;
+
+
+$brand-primary: $color-secondary-3-0;
+$brand-info: $color-secondary-1-0;
+$brand-success: $color-primary-0;
+$brand-warning: $color-secondary-2-0;
+$brand-danger: $color-complement-0;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg: $gray-base !default;
+
+//** Global text color on `<body>`.
+$text-color: $gray-light !default;
+
+//** Global textual link color.
+$link-color:            $brand-info !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      lighten($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$headings-color: $gray !default;
+
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    $gray-lighter !default;
+
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-info !default;
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+//** Default background color used for all tables.
+$table-bg:                      $gray-base !default;
+//** Background color used for `.table-striped`.
+$table-bg-accent:               $gray-darker !default;
+//** Background color used for `.table-hover`.
+$table-bg-hover:                $gray-dark !default;
+$table-bg-active:               $table-bg-hover !default;
+
+//** Border color for table and cell borders.
+$table-border-color:            $gray !default;
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight:                normal !default;
+
+$btn-default-color:              lighten($gray-light, 60%)  !default;
+$btn-default-bg:                 darken($gray-light, 50%) !default;
+$btn-default-border:             $gray-light !default;
+
+$btn-primary-color:              lighten($brand-primary, 60%) !default;
+$btn-primary-bg:                 darken($brand-primary, 30%) !default;
+$btn-primary-border:             $brand-primary !default;
+
+$btn-success-color:              lighten($brand-success, 60%) !default;
+$btn-success-bg:                 darken($brand-success, 35%) !default;
+$btn-success-border:             $brand-success !default;
+
+$btn-info-color:                 lighten($brand-info, 60%) !default;
+$btn-info-bg:                    darken($brand-info, 30%) !default;
+$btn-info-border:                $brand-info !default;
+
+$btn-warning-color:              lighten($brand-warning, 60%) !default;
+$btn-warning-bg:                 darken($brand-warning, 40%) !default;
+$btn-warning-border:             $brand-warning !default;
+
+$btn-danger-color:               lighten($brand-danger, 60%) !default;
+$btn-danger-bg:                  darken($brand-danger, 40%) !default;
+$btn-danger-border:              $brand-danger !default;
+
+$btn-link-disabled-color:        $gray !default;
+
+
+
+
+//== Forms
+//
+//##
+
+//** `<input>` background color
+$input-bg:                       $gray-darker !default;
+//** `<input disabled>` background color
+$input-bg-disabled:              $gray-base !default;
+
+//** Text color for `<input>`s
+$input-color:                    $gray !default;
+//** `<input>` border color
+$input-border:                   $gray !default;
+
+//** Border color for inputs on focus
+$input-border-focus:             $gray-dark !default;
+
+//** Placeholder text color
+$input-color-placeholder:        darken($text-color, 15%) !default;
+
+$legend-color:                   $gray-dark !default;
+$legend-border-color:            #e5e5e5 !default;
+
+//** Background color for textual input addons
+$input-group-addon-bg:           $gray-lighter !default;
+//** Border color for textual input addons
+$input-group-addon-border-color: $input-border !default;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
+
+
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Background for the dropdown menu.
+$dropdown-bg:                    $gray-darker !default;
+//** Dropdown menu `border-color`.
+$dropdown-border:                $gray !default;
+//** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border:       $gray !default;
+//** Divider color for between dropdown items.
+$dropdown-divider-bg:            $gray !default;
+
+//** Dropdown link text color.
+$dropdown-link-color:            lighten($gray, 40%) !default;
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      lighten($gray, 60%) !default;
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg:         lighten($gray-darker, 15%) !default;
+
+//** Active dropdown menu item text color.
+$dropdown-link-active-color:     $component-active-color !default;
+//** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg !default;
+
+//** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color:   $gray-light !default;
+
+//** Text color for headers within dropdown menus.
+$dropdown-header-color:          $gray-light !default;
+
+//** Deprecated `$dropdown-caret-color` as of v3.1.0
+$dropdown-caret-color:           #000 !default;
+
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+$navbar-default-color:             #777 !default;
+$navbar-default-bg:                $gray-darker !default;
+$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar links
+$navbar-default-link-color:                $gray-light !default;
+$navbar-default-link-hover-color:          lighten($gray-light, 10%) !default;
+$navbar-default-link-active-color:         lighten($gray-light, 10%) !default;
+$navbar-default-link-active-bg:            lighten($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       $gray !default;
+
+// Navbar brand label
+$navbar-default-brand-color:               $brand-success !default;
+$navbar-default-brand-hover-color:         lighten($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           #ddd !default;
+$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-border-color:       #ddd !default;
+
+
+
+//== Pagination
+//
+//##
+
+$pagination-color:                     $link-color !default;
+$pagination-bg:                        $gray-darker !default;
+$pagination-border:                    $gray-dark !default;
+
+$pagination-hover-color:               $link-hover-color !default;
+$pagination-hover-bg:                  lighten($gray-darker, 10%) !default;
+$pagination-hover-border:              $gray-dark !default;
+
+$pagination-active-color:              #fff !default;
+$pagination-active-bg:                 lighten($gray-darker, 5%) !default;
+$pagination-active-border:             $gray-dark !default;
+
+$pagination-disabled-color:            $gray-dark !default;
+$pagination-disabled-bg:               $gray-darker !default;
+$pagination-disabled-border:           $gray-dark !default;
+
+
+//== Pager
+//
+//##
+
+$pager-bg:                             $pagination-bg !default;
+$pager-border:                         $pagination-border !default;
+$pager-border-radius:                  15px !default;
+
+$pager-hover-bg:                       $pagination-hover-bg !default;
+
+$pager-active-bg:                      $pagination-active-bg !default;
+$pager-active-color:                   $pagination-active-color !default;
+
+$pager-disabled-color:                 $pagination-disabled-color !default;
+
+
+
+//== Jumbotron
+//
+//##
+$jumbotron-bg:                   $gray-darker !default;
+
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             lighten($brand-success, 60%) !default;
+$state-success-bg:               darken($brand-success, 30%) !default;
+$state-success-border:           $brand-success !default;
+
+$state-info-text:                lighten($brand-info, 60%) !default;
+$state-info-bg:                  darken($brand-info, 30%)  !default;
+$state-info-border:              $brand-info !default;
+
+$state-warning-text:             lighten($brand-warning, 60%) !default;
+$state-warning-bg:               darken($brand-warning, 40%) !default;
+$state-warning-border:           $brand-warning !default;
+
+$state-danger-text:              lighten($brand-danger, 60%) !default;
+$state-danger-bg:                darken($brand-danger, 40%) !default;
+$state-danger-border:            $brand-danger !default;
+
+
+
+//== List group
+//
+//##
+
+//** Background color on `.list-group-item`
+$list-group-bg:                 $gray-darker !default;
+//** `.list-group-item` border color
+$list-group-border:             $gray-dark !default;
+
+//** Background color of single list items on hover
+$list-group-hover-bg:           $gray-dark !default;
+//** Text color of active list items
+$list-group-active-color:       $component-active-color !default;
+//** Background color of active list items
+$list-group-active-bg:          $component-active-bg !default;
+//** Border color of active list elements
+$list-group-active-border:      $list-group-active-bg !default;
+//** Text color for content within active list items
+$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
+
+//** Text color of disabled list items
+$list-group-disabled-color:      $gray-dark !default;
+//** Background color of disabled list items
+$list-group-disabled-bg:         $gray-darker !default;
+//** Text color for content within disabled list items
+$list-group-disabled-text-color: $list-group-disabled-color !default;
+
+$list-group-link-color:         #555 !default;
+$list-group-link-hover-color:   $list-group-link-color !default;
+$list-group-link-heading-color: #333 !default;
+
+
+
+//== Panels
+//
+//##
+
+$panel-bg:                    $gray-darker !default;
+
+
+//** Border color for elements within panels
+$panel-inner-border:          $gray-dark !default;
+$panel-footer-bg:             $gray-darker !default;
+
+$panel-default-text:          $gray-lighter !default;
+$panel-default-border:        $gray !default;
+$panel-default-heading-bg:    $gray-dark !default;
+
+$panel-primary-text:          lighten($brand-primary, 60%) !default;
+$panel-primary-border:        $brand-primary !default;
+$panel-primary-heading-bg:    darken($brand-primary, 20%) !default;
+
+
+
+//== Thumbnails
+//
+//##
+
+//** Thumbnail background color
+$thumbnail-bg:                $body-bg !default;
+//** Thumbnail border color
+$thumbnail-border:            $gray-darker !default;
+//** Custom text color for thumbnail captions
+$thumbnail-caption-color:     $text-color !default;
+
+
+//== Wells
+//
+//##
+
+$well-bg:                     $gray-darker !default;
+$well-border:                 $gray-dark !default;
+
+
+
+
+
+//== Breadcrumbs
+//
+//##
+
+//** Breadcrumb background color
+$breadcrumb-bg:                 $gray-darker !default;
+//** Breadcrumb text color
+$breadcrumb-color:              $text-color !default;
+//** Text color of current page in the breadcrumb
+$breadcrumb-active-color:       $gray-light !default;
+//** Textual separator for between breadcrumb elements
+$breadcrumb-separator:          "/" !default;
+
+
+
