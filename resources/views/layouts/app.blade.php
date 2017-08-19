@@ -15,7 +15,9 @@
     @yield('css')
 </head>
 <body>
+    <div id="app" class="container">
     @yield('body')
+    </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

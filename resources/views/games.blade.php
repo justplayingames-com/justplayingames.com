@@ -1,34 +1,37 @@
 @extends('layouts.app-guest')
 
 @section('content')
-<div class="flex-container">
-<div class="panel panel-primary">
-<div class="panel-heading">
-<h2 class="panel-title">Canned Kitty</h2>
-</div>
-<div class="panel-body">
-<p class="lead">Zany! Fun! Cats!</p>
+<div class="row">
 
-<a class="btn btn-primary" href="{{url('/games/canned-kitty') }}">Play!</a>
-</div>
-</div>
+    <div class="col-xs-12 col-sm-6">
+    @component('components.panel')
+    @slot('title')
+    Canned Kitty
+    @endslot
+    <div class="text-center">
+    <p class="lead">Zany! Fun! Cats!</p>
+    <a class="btn btn-success btn-lg" href="{{url('/games/canned-kitty') }}">Play!</a>
+    </div>
+    @endcomponent
+    </div>
+
+    @if (Firewall::isWhitelisted(Request::ip()))
+    <div class="col-xs-12 col-sm-6">
+    @component('components.panel')
+    @slot('title')
+    Get Off My Lawn
+    @endslot
+    <div class="text-center">
+    <p class="lead">Back in my day...</p>
+    <a class="btn btn-success btn-lg" href="{{url('/games/get-off-my-lawn') }}">Play!</a>
+    </div>
+    @endcomponent
+    </div>
+    @endif
+
 </div>
 @endsection
 
 @section('content-links')
-<a class="btn btn-info" href="{{ url('/') }}">Welcome</a>
-
-@if (Firewall::isWhitelisted(Request::ip()))
-@if (Route::has('login'))
-    @if (Auth::check())
-        <a class="btn btn-info" href="{{ url('/home') }}">Home</a>
-    @else
-        <a class="btn btn-info" href="{{ url('/login') }}">Login</a>
-        <a class="btn btn-info" href="{{ url('/register') }}">Register</a>
-    @endif
-@endif
-
-<a class="btn btn-info" href="{{ url('/blog') }}">News</a>
-@endif
-
+@include('partials.nav-guest')
 @endsection
