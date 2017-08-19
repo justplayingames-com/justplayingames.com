@@ -278,18 +278,18 @@ $pager-disabled-color:                 $pagination-disabled-color !default;
 //== Jumbotron
 //
 //##
-$jumbotron-bg:                   $gray-darker !default;
+$jumbotron-bg:                   $body-bg !default;
 
 
 //== Form states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             lighten($brand-success, 60%) !default;
+$state-success-text:             $brand-success !default;
 $state-success-bg:               darken($brand-success, 30%) !default;
 $state-success-border:           $brand-success !default;
 
-$state-info-text:                lighten($brand-info, 60%) !default;
+$state-info-text:                $brand-info !default;
 $state-info-bg:                  darken($brand-info, 30%)  !default;
 $state-info-border:              $brand-info !default;
 
