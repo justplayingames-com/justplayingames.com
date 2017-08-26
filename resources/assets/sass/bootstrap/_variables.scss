@@ -293,11 +293,11 @@ $state-info-text:                $brand-info !default;
 $state-info-bg:                  darken($brand-info, 30%)  !default;
 $state-info-border:              $brand-info !default;
 
-$state-warning-text:             lighten($brand-warning, 60%) !default;
+$state-warning-text:             $brand-warning !default;
 $state-warning-bg:               darken($brand-warning, 40%) !default;
 $state-warning-border:           $brand-warning !default;
 
-$state-danger-text:              lighten($brand-danger, 60%) !default;
+$state-danger-text:              $brand-danger !default;
 $state-danger-bg:                darken($brand-danger, 40%) !default;
 $state-danger-border:            $brand-danger !default;
 

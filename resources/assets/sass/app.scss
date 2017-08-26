@@ -30,12 +30,26 @@ html, body {
     justify-content: center;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
 .position-ref {
     position: relative;
 }
 
 .content {
     text-align: center;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', monospace;
+    color: $brand-success !important;
 }
 
 .title {
@@ -84,11 +98,7 @@ html, body {
     font-family: 'Luckiest Guy', monospace;
 }
 
-.flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
+
 
 .panel-title {
     font-family: 'Lobster', sans-serif;
