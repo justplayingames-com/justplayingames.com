@@ -26,5 +26,7 @@ Route::group(['middleware' => 'fw-block-bl'], function ()
         Auth::routes();
 
         Route::get('/home', 'HomeController@index')->name('home');
+        Route::get('auth/github', 'Auth\SocialiteController@redirectToProvider');
+        Route::get('auth/github/callback', 'Auth\SocialiteController@handleProviderCallback');
     });
 });

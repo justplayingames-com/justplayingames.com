@@ -35,4 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'github' => [
+        'client_id' => env('SOCIALITE_GITHUB_CLIENT_ID'),
+        'client_secret' => env('SOCIALITE_GITHUB_CLIENT_SECRET'),
+        'redirect' => env('SOCIALITE_GITHUB_REDIRECT'),
+    ],
 ];
