@@ -3,15 +3,14 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Webpatser\Uuid\Uuid;
-use App\UserAka;
-use App\UserOauth;
+use App\User;
 
-class User extends Authenticatable
+use Illuminate\Database\Eloquent\Model;
+
+
+class UserAka extends Model
 {
-    use Notifiable;
-
     /**
     * Indicates if the IDs are auto-incrementing.
     *
@@ -25,7 +24,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'user_id',
+        'name'
     ];
 
     /**
@@ -34,7 +34,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
     ];
 
     /**
@@ -49,13 +48,8 @@ class User extends Authenticatable
         });
     }
 
-    public function aka()
+    public function user()
     {
-        return $this->hasOne(UserAka::class);
-    }
-
-    public function oauths()
-    {
-        return $this->hasMany(UserOauth::class);
+        return $this->belongsTo(User::class);
     }
 }

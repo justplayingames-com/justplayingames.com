@@ -5,7 +5,12 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
+use App\User;
+use App\UserOauth;
 
+use Auth;
+use DB;
+use Hash;
 use Session;
 use Socialite;
 
@@ -16,13 +21,9 @@ class SocialiteController extends Controller
      *
      * @return Response
      */
-    public function redirectToProvider(Request $request)
+    public function redirectToProvider(Request $request, $oauth_provider)
     {
-        return Socialite::driver('github')->redirect();
-
-        // return Socialite::driver('github')
-        //     ->with(['redirect_uri' => env('GITHUB_CALLBACK_URL' ) . '?redirect=' . $request->input('redirect')])
-        //     ->redirect();
+        return Socialite::driver($oauth_provider)->redirect();
     }
 
     /**
@@ -30,16 +31,47 @@ class SocialiteController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback(Request $request)
+    public function handleProviderCallback(Request $request, $oauth_provider)
     {
-        $user = Socialite::driver('github')->user();
+        $oauth_user = Socialite::driver($oauth_provider)->user();
 
-        Session::put('user', $user);
+        $auth_user = $this->findOrCreateUser($oauth_user, $oauth_provider);
+
+        Auth::login($auth_user, true);
+
+        Session::put('user', $auth_user);
 
         $redirect = $request->input('redirect');
         if ($redirect) {
             return redirect($redirect);
         }
-        return json_encode($user);
+
+        return redirect(url('/'));
+    }
+
+    protected function findOrCreateUser($oauth_user, $oauth_provider)
+    {
+        $oauth = UserOauth::where('oauth_id', $oauth_user->id)->first();
+
+        if ($oauth) {
+            return $oauth->user;
+        }
+
+        return DB::transaction(function () use ($oauth_user, $oauth_provider) {
+            $user = User::create([
+                'name'     => $oauth_user->name,
+                'email'    => $oauth_user->email,
+                'password' => Hash::make(str_random(16))
+            ]);
+
+            $user->aka()->create([]);
+
+            $user->oauths()->create([
+                'oauth_provider' => $oauth_provider,
+                'oauth_id' => $oauth_user->id
+            ]);
+
+            return $user;
+        });
     }
 }
