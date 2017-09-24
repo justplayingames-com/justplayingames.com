@@ -11,8 +11,7 @@
 |
 */
 
-Route::group(['middleware' => 'fw-block-bl'], function () 
-{
+Route::group(['middleware' => 'fw-block-bl'], function () {
     Route::get('/', function () {
         return view('welcome');
     });
@@ -21,12 +20,16 @@ Route::group(['middleware' => 'fw-block-bl'], function ()
         return view('games');
     });
 
-    Route::group(['middleware' => 'fw-allow-wl'], function () 
-    {
-        Auth::routes();
+    Route::group(['middleware' => 'fw-allow-wl'], function () {
+        
+        // Authentication Routes...
+        $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+        $this->post('login', 'Auth\LoginController@login');
+        $this->post('logout', 'Auth\LoginController@logout')->name('logout');
+        
+        Route::get('auth/{oauth_provider}', 'Auth\SocialiteController@redirectToProvider');
+        Route::get('auth/{oauth_provider}/callback', 'Auth\SocialiteController@handleProviderCallback');
 
-        Route::get('/home', 'HomeController@index')->name('home');
-        Route::get('auth/github', 'Auth\SocialiteController@redirectToProvider');
-        Route::get('auth/github/callback', 'Auth\SocialiteController@handleProviderCallback');
+        Route::get('/user', 'UserController@index')->name('user');
     });
 });

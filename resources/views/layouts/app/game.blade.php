@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui"/>
         <title>@yield('title')</title>
-        <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <style media="screen" type="text/css">
             html, body {
@@ -30,7 +29,7 @@
         </div>
     </div>
 
-    <div id="game" class="flex-center"></div>
+    <div id="game-container" class="flex-center"></div>
     </div>
 
     @yield('js')

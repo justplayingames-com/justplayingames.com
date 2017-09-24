@@ -1,9 +1,14 @@
-@extends('layouts.app-guest')
+@extends('layouts.app')
 
-@section('content')
+@section('navbar')
+@component('components.navbar-app')
+@endcomponent
+@endsection
+
+@section('body')
 <div class="row">
 
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
     @component('components.panel')
     @slot('title')
     Canned Kitty
@@ -16,7 +21,7 @@
     </div>
 
     @if (Firewall::isWhitelisted(Request::ip()))
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
     @component('components.panel')
     @slot('title')
     Get Off My Lawn
@@ -27,11 +32,21 @@
     </div>
     @endcomponent
     </div>
+
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
+    @component('components.panel')
+    @slot('title')
+    Breakout
+    @endslot
+    <div class="text-center">
+    <p class="lead">Classic! Breakout! Fun!</p>
+    <a class="btn btn-success btn-lg" href="{{url('/games/breakout') }}">Play!</a>
+    </div>
+    @endcomponent
+    </div>
+
     @endif
 
 </div>
 @endsection
 
-@section('content-links')
-@include('partials.nav-guest')
-@endsection

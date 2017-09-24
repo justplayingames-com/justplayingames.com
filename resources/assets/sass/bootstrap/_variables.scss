@@ -216,14 +216,14 @@ $dropdown-caret-color:           #000 !default;
 
 // Basics of a navbar
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                $gray-darker !default;
-$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-bg:                $body-bg !default;
+$navbar-default-border:            $body-bg !default;
 
 // Navbar links
 $navbar-default-link-color:                $gray-light !default;
 $navbar-default-link-hover-color:          lighten($gray-light, 10%) !default;
 $navbar-default-link-active-color:         lighten($gray-light, 10%) !default;
-$navbar-default-link-active-bg:            lighten($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-active-bg:            $body-bg !default;
 $navbar-default-link-disabled-color:       $gray !default;
 
 // Navbar brand label
