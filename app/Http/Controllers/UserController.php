@@ -18,6 +18,8 @@ class UserController extends Controller
             return redirect('/');
         }
 
-        return view('user');
+        $user = Auth::user();
+
+        return view('user', compact('user'));
     }
 }
